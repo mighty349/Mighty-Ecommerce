@@ -1,0 +1,158 @@
+/* ProductCard.module.css */
+
+/* Remove default link styles */
+.productCardLink {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Main product card container with fixed dimensions */
+.productCard {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+  /* Fixed dimensions for consistency */
+  width: 300px;         /* Adjusted fixed width */
+  height: 400px;        /* Fixed height */
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* Lift effect on hover */
+.productCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Image container styling with fixed height */
+.imageContainer {
+  position: relative;
+  overflow: hidden;
+  height: 60%; /* Reserve 60% of the card for the image */
+}
+
+/* Product image with scale effect and full visibility */
+.productImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ensures the full image is visible */
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.imageContainer:hover .productImage {
+  transform: scale(1.05);
+}
+
+/* Quick view overlay hidden by default */
+.quickViewOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.imageContainer:hover .quickViewOverlay {
+  opacity: 1;
+}
+
+/* Quick view button style */
+.quickViewButton {
+  background-color: #2ecc71;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.quickViewButton:hover {
+  background-color: #27ae60;
+}
+
+/* Product info section with fixed height */
+.productInfo {
+  padding: 15px;
+  height: 40%; /* Reserve the remaining 40% for product details */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Brand styling */
+.brand {
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+/* Product name styling with overflow handling */
+.productName {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* Price container styling */
+.priceContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.currentPrice {
+  font-size: 20px;
+  font-weight: 700;
+  color: #e74c3c;
+}
+
+.originalPrice {
+  font-size: 16px;
+  color: #999;
+  text-decoration: line-through;
+}
+
+.discount {
+  font-size: 16px;
+  color: #2ecc71;
+  background: rgba(46, 204, 113, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* Responsive adjustments for smaller devices */
+@media (max-width: 768px) {
+  .productCard {
+    width: 250px;
+    height: 350px;
+  }
+  .productInfo {
+    padding: 10px;
+  }
+  .currentPrice {
+    font-size: 18px;
+  }
+  .productName {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,172 @@
+/* AdminProductCard.module.css */
+
+/* Outer wrapper for spacing; grid gap will handle overall layout */
+.cardWrapper {
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Main product card container */
+.productCard {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  
+  /* Use 100% width with a maximum limit for responsiveness */
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.productCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Media query for desktop screens - decrease card width */
+@media (min-width: 1024px) {
+  .productCard {
+    max-width: 250px;  /* Decrease the width on desktop */
+  }
+}
+
+/* Image container with a responsive aspect ratio */
+.imageContainer {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  /* This creates an aspect ratio; 60% of the width will be the height */
+  padding-top: 60%;
+}
+
+.productImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.imageContainer:hover .productImage {
+  transform: scale(1.05);
+}
+
+/* Product details styling */
+.productInfo {
+  padding: 15px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.brand {
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.productName {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* Price container styles */
+.priceContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.currentPrice {
+  font-size: 20px;
+  font-weight: 700;
+  color: #e74c3c;
+}
+
+.originalPrice {
+  font-size: 16px;
+  color: #999;
+  text-decoration: line-through;
+}
+
+.discount {
+  font-size: 16px;
+  color: #2ecc71;
+  background: rgba(46, 204, 113, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* Admin actions: buttons spanning the same width as the image container (i.e. product card) */
+.adminActions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  max-width: 300px;  /* Same as the default max-width of .productCard */
+  margin: 0 auto;
+  gap: 0;  /* No gap so the two buttons exactly fill the container */
+}
+
+/* Media query for desktop screens: adjust max-width for adminActions */
+@media (min-width: 1024px) {
+  .adminActions {
+    max-width: 250px;  /* Same as the desktop max-width of .productCard */
+  }
+}
+
+/* Button styles */
+.editButton,
+.deleteButton {
+  padding: 8px 0;  /* Vertical padding only so they fill the container horizontally */
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+/* Edit button styling */
+.editButton {
+  background-color: #3498db;
+  color: #fff;
+}
+
+.editButton:hover {
+  background-color: #2980b9;
+}
+
+/* Delete button styling */
+.deleteButton {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+.deleteButton:hover {
+  background-color: #c0392b;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .productInfo {
+    padding: 10px;
+  }
+  .currentPrice {
+    font-size: 18px;
+  }
+  .productName {
+    font-size: 16px;
+  }
+}

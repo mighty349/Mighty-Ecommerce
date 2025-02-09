@@ -1,0 +1,108 @@
+/* AdminDashboard.module.css */
+
+/* Dashboard wrapper – center content and provide overall padding */
+.dashboardWrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f4f7fa;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Redesigned header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #3a3d98, #2a2e75);
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  border-radius: 0 0 8px 8px;
+}
+
+/* Center title styling */
+.title {
+  flex: 1;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Header buttons */
+.header button {
+  background-color: #fff;
+  color: #3a3d98;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  min-width: 120px;
+  max-width: 180px;
+}
+
+.header button:hover {
+  background-color: #e2e2e2;
+  transform: scale(1.03);
+}
+
+/* Logout button aligned left */
+.logoutButton {
+  margin-right: auto;
+}
+
+/* Add Product button aligned right */
+.addProductButton {
+  margin-left: auto;
+}
+
+/* Main content area */
+.mainContent {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Responsive grid for product cards */
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* For desktop screens, force exactly 3 columns */
+@media (min-width: 1024px) {
+  .productGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Message styling */
+.message {
+  text-align: center;
+  color: #e74c3c;
+  margin-bottom: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .header {
+    padding: 10px;
+  }
+  .title {
+    font-size: 1.2rem;
+  }
+  .header button {
+    font-size: 0.8rem;
+    max-width: 80px;
+    font-weight: bold;
+    border-radius: 2px;
+    padding: 3px 1px;
+  }
+  .header .logoutButton {
+    max-width: 70px;
+  }
+}

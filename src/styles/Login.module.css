@@ -1,0 +1,191 @@
+/* styles/Login.module.css */
+:root {
+  --primary-bg: #eaf4ff;
+  --card-bg: #ffffff;
+  --input-bg: #f3f4f6;
+  --text-color: #333;
+  --button-bg: #000;
+  --button-text: #fff;
+  --border-radius: 12px;
+  --box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Apply styles only to .login-container, not globally */
+.login-container {
+  background: var(--card-bg);
+  padding: 30px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  margin: auto; /* Ensure proper centering */
+}
+
+/* Prevent global styles from affecting body */
+body.login-page {
+  background: var(--primary-bg);
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Adjust logo style */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+/* Form styling */
+.login-form h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: var(--text-color);
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  background: var(--input-bg);
+  padding: 10px;
+  border-radius: var(--border-radius);
+  margin-bottom: 15px;
+}
+
+
+
+.form-group i {
+  margin-right: 10px;
+  color: #888;
+}
+
+.form-group input {
+  border: none;
+  background: transparent;
+  outline: none;
+  flex: 1;
+  font-size: 16px;
+  padding: 5px;
+}
+
+/* Button styles */
+.form-group-button {
+  margin-top: 10px;
+}
+
+button {
+  background: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  padding: 10px 15px;
+  width: 100%;
+  border-radius: var(--border-radius);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.registerBtn {
+  background: #fff;
+  color: var(--button-bg);
+  border: 1px solid var(--button-bg);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .login-container {
+    width: 90%;
+  }
+}
+/* Ensure full-page centering */
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: var(--primary-bg);
+}
+
+/* Center the login container */
+.login-container {
+  background: var(--card-bg);
+  padding: 30px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Ensure form elements align properly */
+.form-group {
+  display: flex;
+  align-items: center;
+  background: var(--input-bg);
+  padding: 10px;
+  border-radius: var(--border-radius);
+  margin-bottom: 15px;
+}
+
+/* Input fields */
+.form-group input {
+  border: none;
+  background: transparent;
+  outline: none;
+  flex: 1;
+  font-size: 16px;
+  padding: 5px;
+}
+
+/* Button styling */
+button {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: var(--border-radius);
+  font-size: 16px;
+  cursor: pointer;
+}
+/* Existing CSS ... */
+
+
+
+/* New styles for the admin login button */
+.admin-login-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  padding: 10px 15px;
+  border-radius: var(--border-radius);
+  font-size: 16px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+  width: auto; /* Ensures the button only occupies the necessary width */
+}
+
+.admin-login-btn:hover {
+  opacity: 0.9;
+}
+
+/* Responsive adjustments for mobile screens */
+@media (max-width: 600px) {
+  .admin-login-btn {
+    top: 10px;
+    right: 10px;
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
+
+

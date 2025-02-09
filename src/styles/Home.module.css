@@ -1,0 +1,115 @@
+/* Home.module.css */
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Header Styling */
+.header {
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 12px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  margin: 20px auto;
+}
+
+/* Center Title */
+.title {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.title h1 {
+  font-size: 2rem;
+  color: black;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* View Cart Button */
+.cartButton {
+  background: #4f64b6;
+  color: #222;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  max-width: 140px;
+  width: 50%;
+}
+
+.cartButton:hover {
+  background: #8587ff;
+  transform: scale(1.05);
+}
+
+/* Logout Button */
+.logout button {
+  background: #ff4d4d;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+}
+
+.logout button:hover {
+  background: #e63e3e;
+  transform: scale(1.05);
+}
+
+/* Product Grid Layout */
+/* Using CSS Grid to align product cards into rows and columns */
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+/* Load More Button Container */
+.loadMore {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.loadMore button {
+  background-color: #3498db;
+  color: white;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.loadMore button:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+
+/* Responsive Design for Smaller Screens */
+@media screen and (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .title h1 {
+    font-size: 1.8rem;
+  }
+}

@@ -1,0 +1,232 @@
+/* CartPage.module.css */
+
+/* Global container for the cart page */
+.cartContainer {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #333;
+}
+
+/* Page Title */
+.cartContainer h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #2c3e50;
+}
+
+/* Continue Shopping Button */
+.continueShopping {
+  display: inline-block;
+  margin-bottom: 20px;
+  background-color: transparent;
+  border: none;
+  color: #3498db;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.continueShopping:hover {
+  color: #2980b9;
+}
+
+/* Empty Cart Message */
+.emptyCart {
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 40px;
+  color: #777;
+}
+
+/* Cart Table Styling */
+.cartTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Header Row */
+.tableHeader {
+  display: flex;
+  background-color: #2c3e50;
+  color: #fff;
+  font-weight: bold;
+  padding: 12px;
+}
+
+.headerItem {
+  flex: 1;
+  text-align: center;
+}
+
+/* Table Row Styling */
+.tableRow {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 1px solid #f0f0f0;
+  background: #fff;
+  transition: background 0.3s ease;
+}
+
+.tableRow:hover {
+  background: #f5f5f5;
+}
+
+/* Product Cell */
+.productCell {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: left;
+  padding: 0 8px;
+}
+
+.productImage {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.productName {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Other Table Cells */
+.priceCell,
+.quantityCell,
+.totalCell,
+.actionsCell {
+  flex: 1;
+  text-align: center;
+  padding: 0 8px;
+}
+
+/* Quantity Controls */
+.quantityControls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.quantityControls button {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: black;
+}
+
+.quantityControls button:hover {
+  background-color: #f0f0f0;
+}
+
+.quantityControls span {
+  width: 30px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+/* Remove Button */
+.removeButton {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.removeButton:hover {
+  background-color: #c0392b;
+}
+
+/* Total Row Styling */
+.totalRow {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 20px;
+  padding: 12px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.totalLabel {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.totalValue {
+  font-size: 1.5rem;
+  color: #e74c3c;
+}
+
+/* Checkout Button */
+.checkoutButton {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  margin: 30px auto;
+  background-color: #27ae60;
+  color: #fff;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.checkoutButton:hover {
+  background-color: #219150;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design Adjustments */
+@media screen and (max-width: 768px) {
+  .cartContainer {
+    padding: 10px;
+    margin: 20px auto;
+  }
+  .tableHeader, .tableRow {
+    flex-direction: column;
+    text-align: center;
+  }
+  .headerItem,
+  .priceCell,
+  .quantityCell,
+  .totalCell,
+  .actionsCell {
+    padding: 5px 0;
+  }
+  .totalRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .totalLabel,
+  .totalValue {
+    margin: 5px 0;
+  }
+}
